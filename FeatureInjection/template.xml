@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<template
+        name="Feature Generation"
+        description="Creates a Dagger2 component, module and scope for the specified feature"
+        format="4"
+        revision="1">
+
+    <category value="Clean + MVP"/>
+
+    <parameter
+            id="userFeatureName"
+            name="Feature Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="Feature"
+            help="The name of the feature."/>
+
+    <parameter
+            id="featureName"
+            name="Feature Name Programality"
+            type="string"
+            default="Feature"
+            visibility="false"
+            suggest="${userFeatureName?uncap_first}"/>
+
+    <parameter
+            id="featureNameClass"
+            name="Component Name"
+            type="string"
+            default="FeatureComponent"
+            visibility="false"
+            suggest="${featureName?cap_first}"/>
+
+    <globals file="globals.xml.ftl"/>
+
+    <execute file="recipe.xml.ftl"/>
+</template>

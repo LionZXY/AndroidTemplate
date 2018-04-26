@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<template
+    name="Feature - Presentation"
+    description="Creates a Feature package in the presentation layer"
+    format="4"
+    revision="1">
+
+    <category value="Clean + MVP" />
+
+    <parameter
+            id="userFeatureName"
+            name="Feature Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="Feature"
+            help="The name of the feature."/>
+
+    <parameter
+            id="featureName"
+            name="Feature Name Programality"
+            type="string"
+            default="Feature"
+            visibility="false"
+            suggest="${userFeatureName?uncap_first}"/>
+
+    <parameter
+            id="featureNameClass"
+            name="Component Name"
+            type="string"
+            default="FeatureComponent"
+            visibility="false"
+            suggest="${featureName?cap_first}"/>
+
+    <parameter
+        id="createActivity"
+        name="Create Activity"
+        type="boolean"
+        default="true"
+        help="If true, activity will be created" />
+
+    <parameter
+        id="createFragment"
+        name="Create Fragment"
+        type="boolean"
+        default="false"
+        help="If true, a fragment will be created" />
+
+    <globals file="globals.xml.ftl" />
+
+    <execute file="recipe.xml.ftl" />
+</template>
