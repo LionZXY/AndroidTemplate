@@ -1,6 +1,7 @@
 package ${mainSourceSetPackage}.view.${featureName}.ui
 
 import com.arellomobile.mvp.MvpAppCompatActivity
+import android.os.Bundle
 import com.arellomobile.mvp.presenter.InjectPresenter
 import ${mainSourceSetPackage}.view.${featureName}.presenter.${featureNameClass}Presenter
 

@@ -2,6 +2,10 @@ package ${mainSourceSetPackage}.view.${featureName}.ui
 
 import com.arellomobile.mvp.MvpAppCompatFragment
 import com.arellomobile.mvp.presenter.InjectPresenter
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import ${mainSourceSetPackage}.view.${featureName}.presenter.${featureNameClass}Presenter
 
 class ${featureNameClass}Fragment: MvpAppCompatFragment(), I${featureNameClass}View {

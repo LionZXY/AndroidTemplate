@@ -1,4 +1,4 @@
-package ${mainSourceSetPackage}.view.${featureName}.ui
+package ${mainSourceSetPackage}.view.${featureName}.presenter
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
