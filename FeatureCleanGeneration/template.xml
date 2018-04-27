@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <template
-        name="Feature Generation"
+        name="Feature Clean Generation"
         description="Creates a Dagger2 component, module and scope for the specified feature"
         format="4"
         revision="1">
@@ -29,7 +29,7 @@
             type="string"
             default="FeatureComponent"
             visibility="false"
-            suggest="${featureName?cap_first}"/>
+            suggest="${featureName?replace('_', ' ')?capitalize?replace(' ', '')}"/>
 
     <globals file="globals.xml.ftl"/>
 

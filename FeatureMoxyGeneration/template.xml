@@ -29,7 +29,7 @@
             type="string"
             default="FeatureComponent"
             visibility="false"
-            suggest="${featureName?cap_first}"/>
+            suggest="${featureName?replace('_', ' ')?capitalize?replace(' ', '')}"/>
 
     <parameter
         id="createActivity"
